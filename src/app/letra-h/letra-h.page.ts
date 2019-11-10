@@ -1,15 +1,34 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-letra-h',
   templateUrl: './letra-h.page.html',
   styleUrls: ['./letra-h.page.scss'],
 })
-export class LetraHPage implements OnInit {
+export class LetraHPage {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit() {
+  home(){
+    this.router.navigate(["/categorias"]);
+  }
+
+  regresar_categoria(){
+    this.router.navigate(["/cat-abecedario"]);
+  }
+
+  siguiente(){
+    this.router.navigate(["/letra-i"]);
+  }
+
+  anterior(){
+    this.router.navigate(["/letra-g"]);
+  }
+
+  public ocultar: boolean = false;
+  accion(){
+    this.ocultar = !this.ocultar;
   }
 
 }
