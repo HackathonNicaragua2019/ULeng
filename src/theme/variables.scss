@@ -2,6 +2,15 @@
 // http://ionicframework.com/docs/theming/
 
 /** Ionic CSS Variables **/
+
+.ion-color-rosa {
+  --ion-color-base: #e473e9;
+}
+
+.ion-color-interfaz {
+  --ion-color-base: #efd7f0;
+}
+
 :root {
   /** primary **/
   --ion-color-primary: #3880ff;
@@ -74,4 +83,8 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /** mis colores **/
+  --ion-color-rosa: #e473e9;
+  --ion-color-interfaz: #efd7f0;
 }
