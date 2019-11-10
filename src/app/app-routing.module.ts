@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './guards/auth.guard';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
-  { path: 'categorias', loadChildren: './categorias/categorias.module#CategoriasPageModule' },
+  { path: 'categorias', loadChildren: './categorias/categorias.module#CategoriasPageModule', canActivate: [AuthGuard] },
   { path: 'cat-abecedario', loadChildren: './cat-abecedario/cat-abecedario.module#CatAbecedarioPageModule' },
   { path: 'cat-animales', loadChildren: './cat-animales/cat-animales.module#CatAnimalesPageModule' },
   { path: 'cat-bebidas', loadChildren: './cat-bebidas/cat-bebidas.module#CatBebidasPageModule' },
@@ -75,7 +77,8 @@ const routes: Routes = [
   { path: 'ani-gato', loadChildren: './ani-gato/ani-gato.module#AniGatoPageModule' },
   { path: 'ani-mono', loadChildren: './ani-mono/ani-mono.module#AniMonoPageModule' },
   { path: 'ani-perro', loadChildren: './ani-perro/ani-perro.module#AniPerroPageModule' },
-  { path: 'ani-vaca', loadChildren: './ani-vaca/ani-vaca.module#AniVacaPageModule' },  { path: 'registro', loadChildren: './registro/registro.module#RegistroPageModule' },
+  { path: 'ani-vaca', loadChildren: './ani-vaca/ani-vaca.module#AniVacaPageModule' },
+  { path: 'registro', loadChildren: './registro/registro.module#RegistroPageModule' },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
 
 ];
