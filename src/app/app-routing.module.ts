@@ -5,7 +5,7 @@ import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
+  { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule), canActivate: [AuthGuard]},
   { path: 'categorias', loadChildren: './categorias/categorias.module#CategoriasPageModule', },
   { path: 'cat-abecedario', loadChildren: './cat-abecedario/cat-abecedario.module#CatAbecedarioPageModule' },
   { path: 'cat-animales', loadChildren: './cat-animales/cat-animales.module#CatAnimalesPageModule' },
