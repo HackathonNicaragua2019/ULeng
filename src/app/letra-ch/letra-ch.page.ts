@@ -19,7 +19,7 @@ export class LetraChPage {
   }
 
   siguiente(){
-    this.router.navigate(["/letra-e"]);
+    this.router.navigate(["/letra-d"]);
   }
 
   anterior(){
