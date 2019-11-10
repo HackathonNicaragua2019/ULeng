@@ -1,9 +1,24 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>registro</ion-title>
+  <ion-toolbar color="rosa">
+    <ion-title>Registro!</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content padding class="background">
+  <ion-item>
+    <ion-label>
+      Email!
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label>
+        Contraseña!
+      </ion-label>
+      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+    <ion-item-divider>
+      <ion-button size="large" (click)="onRegister()">Regístrame!</ion-button>
+      <ion-button size="large" href="/login">Login!</ion-button>
+    </ion-item-divider>
 </ion-content>

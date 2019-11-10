@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { User } from '../shared/user.class';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-registro',
@@ -6,10 +9,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registro.page.scss'],
 })
 export class RegistroPage implements OnInit {
+  user: User = new User();
 
-  constructor() { }
+  constructor(private authSvc: AuthService, private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  async onRegister(){
+    const user = await this.authSvc.onRegister(this.user);
+    if (user) {
+      console.log('Usuario registrado exitosamente!');
+      this.router.navigateByUrl('/');
+    }
   }
 
 }
