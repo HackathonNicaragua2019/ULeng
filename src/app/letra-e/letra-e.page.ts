@@ -1,15 +1,34 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-letra-e',
   templateUrl: './letra-e.page.html',
   styleUrls: ['./letra-e.page.scss'],
 })
-export class LetraEPage implements OnInit {
+export class LetraEPage {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit() {
+  home(){
+    this.router.navigate(["/categorias"]);
+  }
+
+  regresar_categoria(){
+    this.router.navigate(["/cat-abecedario"]);
+  }
+
+  siguiente(){
+    this.router.navigate(["/letra-f"]);
+  }
+
+  anterior(){
+    this.router.navigate(["/letra-d"]);
+  }
+
+  public ocultar: boolean = false;
+  accion(){
+    this.ocultar = !this.ocultar;
   }
 
 }
