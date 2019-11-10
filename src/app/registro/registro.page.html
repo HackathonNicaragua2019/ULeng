@@ -1,24 +1,13 @@
-<ion-header>
-  <ion-toolbar color="rosa">
-    <ion-title>Registro!</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content padding class="background">
-  <ion-item>
-    <ion-label>
-      Email!
-    </ion-label>
-    <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+  <ion-title color="rosa" text-center style="margin-top: 200px;">Registro!</ion-title>
+  <ion-item style="margin-top: 20px;">
+    <ion-input placeholder="E-mail" type="text" [(ngModel)]="user.email"></ion-input>
   </ion-item>
-  <ion-item>
-      <ion-label>
-        Contraseña!
-      </ion-label>
-      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
-    </ion-item>
-    <ion-item-divider>
-      <ion-button size="large" (click)="onRegister()">Regístrame!</ion-button>
-      <ion-button size="large" href="/login">Login!</ion-button>
-    </ion-item-divider>
+  <ion-item style="margin-top: 20px;">
+    <ion-input placeholder="Contraseña" type="password" [(ngModel)]="user.password"></ion-input>
+  </ion-item>
+  <ion-item-divider style="margin-top: 20px; text-align: center;">
+    <ion-button color="rosa" size="small" (click)="onRegister()">Regístrame!</ion-button>
+    <ion-button color="rosa" size="small" href="/login">Login!</ion-button>
+  </ion-item-divider>
 </ion-content>
