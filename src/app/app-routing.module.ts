@@ -75,7 +75,9 @@ const routes: Routes = [
   { path: 'ani-gato', loadChildren: './ani-gato/ani-gato.module#AniGatoPageModule' },
   { path: 'ani-mono', loadChildren: './ani-mono/ani-mono.module#AniMonoPageModule' },
   { path: 'ani-perro', loadChildren: './ani-perro/ani-perro.module#AniPerroPageModule' },
-  { path: 'ani-vaca', loadChildren: './ani-vaca/ani-vaca.module#AniVacaPageModule' },
+  { path: 'ani-vaca', loadChildren: './ani-vaca/ani-vaca.module#AniVacaPageModule' },  { path: 'registro', loadChildren: './registro/registro.module#RegistroPageModule' },
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
+
 ];
 
 @NgModule({

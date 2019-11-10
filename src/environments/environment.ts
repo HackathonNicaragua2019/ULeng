@@ -4,6 +4,16 @@
 
 export const environment = {
   production: false
+  firebaseConfig: {
+    apiKey: "AIzaSyDLAWUgHeZsUE08uOe05UM7mWUb2hv5RO0",
+    authDomain: "ulengionic.firebaseapp.com",
+    databaseURL: "https://ulengionic.firebaseio.com",
+    projectId: "ulengionic",
+    storageBucket: "ulengionic.appspot.com",
+    messagingSenderId: "658622103028",
+    appId: "1:658622103028:web:088c774901d1a66c068da1",
+    measurementId: "G-4WDWQKF5CH"
+  }
 };
 
 /*
