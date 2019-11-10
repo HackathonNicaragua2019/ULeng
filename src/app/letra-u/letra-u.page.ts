@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-letra-u',
@@ -15,7 +15,7 @@ export class LetraUPage {
   }
 
   regresar_categoria(){
-    this.router.navigate(["/cat-abecedario"]);
+    this.router.navigate(["/cat-animales"]);
   }
 
   siguiente(){
