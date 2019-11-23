@@ -1,9 +1,32 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>cat_comidas</ion-title>
-  </ion-toolbar>
-</ion-header>
+    <ion-toolbar color="rosa">
+      <ion-buttons slot="start">
+        <ion-button (click)='regresar_categoria()'><ion-icon name="arrow-back"></ion-icon></ion-button>
+      </ion-buttons>
+      <ion-title text-center>Comidas Típicas!</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)='home()'><ion-icon name="home"></ion-icon></ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding class="background">
+  
+    <div class="card">
+      <div class="item item-body">
+        <img class="full-image"src="/assets/img/portadaComidas.png" >
+      </div>
+    </div>
 
-<ion-content>
-
-</ion-content>
+    <ion-button expand="block" color="rosa" style="text-transform: none; margin-top: 20px;" href="/com-baho">Baho!</ion-button>
+    <ion-button expand="block" color="rosa" style="text-transform: none; margin-top: 5px;" href="/com-asado">Carne Asada!</ion-button>
+    <ion-button expand="block" color="rosa" style="text-transform: none; margin-top: 5px;" href="/com-chanyuca">Chancho con Yuca!</ion-button>
+    <ion-button expand="block" color="rosa" style="text-transform: none; margin-top: 5px;" href="/com-gallopinto">Gallo Pinto!</ion-button>
+    <ion-button expand="block" color="rosa" style="text-transform: none; margin-top: 5px;" href="/com-indioviejo">Indio Viejo!</ion-button>
+    <ion-button expand="block" color="rosa" style="text-transform: none; margin-top: 5px;" href="/com-nacatamal">Nacatamal!</ion-button>
+    <ion-button expand="block" color="rosa" style="text-transform: none; margin-top: 5px;" href="/com-quesillo">Quesillo!</ion-button>
+    <ion-button expand="block" color="rosa" style="text-transform: none; margin-top: 5px;" href="/com-rondon">Rondón!</ion-button>
+    <ion-button expand="block" color="rosa" style="text-transform: none; margin-top: 5px;" href="/com-sopamond">Sopa de Mondongo!</ion-button>
+    <ion-button expand="block" color="rosa" style="text-transform: none; margin-top: 5px;" href="/com-vigoron">Vigorón!</ion-button>
+  
+  </ion-content>
