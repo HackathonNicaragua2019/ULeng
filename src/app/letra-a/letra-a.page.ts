@@ -11,11 +11,11 @@ export class LetraAPage {
   constructor(private router: Router) { }
 
   home(){
-    this.router.navigate(["/home"]);
+    this.router.navigate(["/categorias"]);
   }
 
   regresar_categoria(){
-    this.router.navigate(["/categorias"]);
+    this.router.navigate(["/cat-abecedario"]);
   }
 
   siguiente(){

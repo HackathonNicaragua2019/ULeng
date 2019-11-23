@@ -1,17 +1,6 @@
 <ion-content padding class="background">
-  <!-- <div style="text-align: center; align-content:center; align-self:center; margin-top: 20px;">
-    <img src="/assets/img/uleng_logo.png" style= "width: 250px; height: 355px;"/>
-  </div>
-  <ion-card-header color="secondary">
-  <ion-card-title text-center color="primary">Bienvenido a ULeng!</ion-card-title>
-  </ion-card-header>
-  <ion-card-content text-center>
-    <p>Las Manos son la Voz del Sordo</p>
-  </ion-card-content> -->
+  <ion-card (click)='go()' style="margin-top: 70px;">
+    <img src="/assets/img/portadaBebidas.png">
+  </ion-card>
+  <ion-button color="rosa" size="small" (click)="onLogout()">Cerrar Sesión</ion-button>
 </ion-content>
-
-<ion-footer (click)='go()'>
-  <ion-toolbar color="verde">
-    <ion-title text-center>INICIAR</ion-title>
-  </ion-toolbar>
-</ion-footer>
