@@ -1,15 +1,30 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ani-vaca',
   templateUrl: './ani-vaca.page.html',
   styleUrls: ['./ani-vaca.page.scss'],
 })
-export class AniVacaPage implements OnInit {
+export class AniVacaPage {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit() {
+  home(){
+    this.router.navigate(["/categorias"]);
+  }
+
+  regresar_categoria(){
+    this.router.navigate(["/cat-animales"]);
+  }
+
+  anterior(){
+    this.router.navigate(["/ani-perro"]);
+  }
+
+  public ocultar: boolean = false;
+  accion(){
+    this.ocultar = !this.ocultar;
   }
 
 }

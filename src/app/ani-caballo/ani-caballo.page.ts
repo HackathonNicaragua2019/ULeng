@@ -22,6 +22,10 @@ export class AniCaballoPage {
     this.router.navigate(["/ani-cerdo"]);
   }
 
+  anterior(){
+    this.router.navigate(["/ani-ardilla"]);
+  }
+
   public ocultar: boolean = false;
   accion(){
     this.ocultar = !this.ocultar;

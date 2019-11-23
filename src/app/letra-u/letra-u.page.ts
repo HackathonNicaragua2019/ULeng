@@ -15,7 +15,7 @@ export class LetraUPage {
   }
 
   regresar_categoria(){
-    this.router.navigate(["/cat-animales"]);
+    this.router.navigate(["/cat-abecedario"]);
   }
 
   siguiente(){

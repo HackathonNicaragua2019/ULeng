@@ -9,7 +9,7 @@
 
     <button ion-button block (click)="accion()">Ver Instrucciones...</button>
     <ion-card *ngIf="ocultar" color="interfaz">
-      <h6>Colocar la mano cerrada a excepción del dedo pulgar.</h6>
+      <h6>Colocar la mano izquierda recta y con la mano derecha tener extendido hacia abajo los dedos índice y medio y colocarlos en la mano izquierda la partió del centro de ambos dedos de la mano.</h6>
     </ion-card>
 
 </ion-content>
@@ -17,7 +17,7 @@
   <ion-footer>
       <ion-toolbar color="rosa">
         <ion-buttons slot="start" style="margin-left: 10px;">
-          <ion-button><ion-icon name="arrow-dropleft-circle"></ion-icon></ion-button>
+          <ion-button (click)='anterior()'><ion-icon name="arrow-dropleft-circle"></ion-icon></ion-button>
         </ion-buttons>
         <ion-buttons slot="start" style="margin-left: 35px;">
           <ion-button (click)='siguiente()'><ion-icon name="arrow-dropright-circle"></ion-icon></ion-button>

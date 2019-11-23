@@ -30,4 +30,5 @@ export class LetraWPage {
   accion(){
     this.ocultar = !this.ocultar;
   }
+
 }
