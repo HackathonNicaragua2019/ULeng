@@ -1,9 +1,34 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>com_rondon</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content padding class="background">
+  <div style="text-align: center; align-content:center; align-self:center; margin-top: 10px;">
+    <img src="/assets/img/comidas/rondon.png">
+  </div>
 
-<ion-content>
+  <div style="text-align: center; align-content:center; align-self:center; margin-top: 10px;">
+    <img src="/assets/img/gif_comida/Rondon.gif" alt="Enviar" style= "width: 160px; height: 260px;">
+  </div>
+
+  <button ion-button block (click)="accion()">Ver Instrucciones...</button>
+  <ion-card *ngIf="ocultar" color="interfaz">
+    <h6>Juntar ambas manos en posiciones diferentes y cruzarlas.Rondón: “La palabra rondón no tiene seña por lo tanto se usa el dactilado”
+      Cruce los dedos índice y medio formando una “r”, luego junte todos los dedos formando un círculo (o), coloque los dedos índice y medio hacia abajo rectos, mantenga el dedo índice vertical y los demás dedos juntarlos formando un círculo, nuevamente junte todos los dedos formando un círculo (o), y por ultimo coloque los dedos índice y medio hacia abajo rectos. 
+     </h6>
+  </ion-card>
 
 </ion-content>
+
+<ion-footer>
+    <ion-toolbar color="rosa">
+      <ion-buttons slot="start" style="margin-left: 10px;">
+        <ion-button (click)='anterior()'><ion-icon name="arrow-dropleft-circle"></ion-icon></ion-button>
+      </ion-buttons>
+      <ion-buttons slot="start" style="margin-left: 35px;">
+        <ion-button (click)='siguiente()'><ion-icon name="arrow-dropright-circle"></ion-icon></ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end" style="margin-right: 35px;">
+        <ion-button (click)='home()'><ion-icon name="home"></ion-icon></ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end" style="margin-right: 10px;">
+        <ion-button (click)='regresar_categoria()'><ion-icon name="exit"></ion-icon></ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>

@@ -1,9 +1,32 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>beb_tibio</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content padding class="background">
+  <div style="text-align: center; align-content:center; align-self:center; margin-top: 10px;">
+    <img src="/assets/img/bebidas/tibio.png">
+  </div>
 
-<ion-content>
+  <div style="text-align: center; align-content:center; align-self:center; margin-top: 10px;">
+    <img src="/assets/img/gif_bebidas/Tibio.gif" alt="Enviar" style= "width: 160px; height: 260px;">
+  </div>
+
+  <button ion-button block (click)="accion()">Ver Instrucciones...</button>
+  <ion-card *ngIf="ocultar" color="interfaz">
+    <h6> colocar la mano izquierda verticalmente formando una “C” y con la mano derecha formar un círculo con el dedo de en medio, colocar la mano derecha encima de la palma de la mano izquierda y hacer un rápido movimiento hacia arriba.</h6>
+  </ion-card>
 
 </ion-content>
+
+<ion-footer>
+    <ion-toolbar color="rosa">
+      <ion-buttons slot="start" style="margin-left: 10px;">
+        <ion-button (click)='anterior()'><ion-icon name="arrow-dropleft-circle"></ion-icon></ion-button>
+      </ion-buttons>
+      <ion-buttons slot="start" style="margin-left: 35px;">
+        <ion-button (click)='siguiente()'><ion-icon name="arrow-dropright-circle"></ion-icon></ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end" style="margin-right: 35px;">
+        <ion-button (click)='home()'><ion-icon name="home"></ion-icon></ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end" style="margin-right: 10px;">
+        <ion-button (click)='regresar_categoria()'><ion-icon name="exit"></ion-icon></ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
