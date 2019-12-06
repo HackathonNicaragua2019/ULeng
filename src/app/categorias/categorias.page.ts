@@ -35,7 +35,7 @@ export class CategoriasPage {
   }
 
   goDepartamentos(){
-    this.router.navigate(["/cat-Departamentos"]);
+    this.router.navigate(["/cat-departamentos"]);
   }
 
   goEmociones(){

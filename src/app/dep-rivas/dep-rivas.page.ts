@@ -1,15 +1,30 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dep-rivas',
   templateUrl: './dep-rivas.page.html',
   styleUrls: ['./dep-rivas.page.scss'],
 })
-export class DepRivasPage implements OnInit {
+export class DepRivasPage {
+ 
+  constructor(private router: Router) { }
 
-  constructor() { }
+  home(){
+    this.router.navigate(["/categorias"]);
+  }
 
-  ngOnInit() {
+  regresar_categoria(){
+    this.router.navigate(["/cat-departamentos"]);
+  }
+
+  anterior(){
+    this.router.navigate(["/dep-riojuan"]);
+  }
+
+  public ocultar: boolean = false;
+  accion(){
+    this.ocultar = !this.ocultar;
   }
 
 }
