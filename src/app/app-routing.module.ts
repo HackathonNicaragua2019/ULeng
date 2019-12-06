@@ -117,6 +117,15 @@ const routes: Routes = [
   { path: 'dep-raccs', loadChildren: './dep-raccs/dep-raccs.module#DepRaccsPageModule' },
   { path: 'dep-riojuan', loadChildren: './dep-riojuan/dep-riojuan.module#DepRiojuanPageModule' },
   { path: 'dep-rivas', loadChildren: './dep-rivas/dep-rivas.module#DepRivasPageModule' },
+  { path: 'emo-amistoso', loadChildren: './emo-amistoso/emo-amistoso.module#EmoAmistosoPageModule' },
+  { path: 'emo-cansado', loadChildren: './emo-cansado/emo-cansado.module#EmoCansadoPageModule' },
+  { path: 'emo-confundido', loadChildren: './emo-confundido/emo-confundido.module#EmoConfundidoPageModule' },
+  { path: 'emo-conmocionado', loadChildren: './emo-conmocionado/emo-conmocionado.module#EmoConmocionadoPageModule' },
+  { path: 'emo-enamorado', loadChildren: './emo-enamorado/emo-enamorado.module#EmoEnamoradoPageModule' },
+  { path: 'emo-enojado', loadChildren: './emo-enojado/emo-enojado.module#EmoEnojadoPageModule' },
+  { path: 'emo-feliz', loadChildren: './emo-feliz/emo-feliz.module#EmoFelizPageModule' },
+  { path: 'emo-llorando', loadChildren: './emo-llorando/emo-llorando.module#EmoLlorandoPageModule' },
+  { path: 'emo-triste', loadChildren: './emo-triste/emo-triste.module#EmoTristePageModule' },
 
 
 ];
