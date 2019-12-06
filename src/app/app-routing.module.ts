@@ -100,6 +100,23 @@ const routes: Routes = [
   { path: 'com-rondon', loadChildren: './com-rondon/com-rondon.module#ComRondonPageModule' },
   { path: 'com-sopamond', loadChildren: './com-sopamond/com-sopamond.module#ComSopamondPageModule' },
   { path: 'com-vigoron', loadChildren: './com-vigoron/com-vigoron.module#ComVigoronPageModule' },
+  { path: 'dep-boaco', loadChildren: './dep-boaco/dep-boaco.module#DepBoacoPageModule' },
+  { path: 'dep-carazo', loadChildren: './dep-carazo/dep-carazo.module#DepCarazoPageModule' },
+  { path: 'dep-chinandega', loadChildren: './dep-chinandega/dep-chinandega.module#DepChinandegaPageModule' },
+  { path: 'dep-chontales', loadChildren: './dep-chontales/dep-chontales.module#DepChontalesPageModule' },
+  { path: 'dep-esteli', loadChildren: './dep-esteli/dep-esteli.module#DepEsteliPageModule' },
+  { path: 'dep-granada', loadChildren: './dep-granada/dep-granada.module#DepGranadaPageModule' },
+  { path: 'dep-jinotega', loadChildren: './dep-jinotega/dep-jinotega.module#DepJinotegaPageModule' },
+  { path: 'dep-leon', loadChildren: './dep-leon/dep-leon.module#DepLeonPageModule' },
+  { path: 'dep-madriz', loadChildren: './dep-madriz/dep-madriz.module#DepMadrizPageModule' },
+  { path: 'dep-managua', loadChildren: './dep-managua/dep-managua.module#DepManaguaPageModule' },
+  { path: 'dep-masaya', loadChildren: './dep-masaya/dep-masaya.module#DepMasayaPageModule' },
+  { path: 'dep-matagalpa', loadChildren: './dep-matagalpa/dep-matagalpa.module#DepMatagalpaPageModule' },
+  { path: 'dep-nuevaseg', loadChildren: './dep-nuevaseg/dep-nuevaseg.module#DepNuevasegPageModule' },
+  { path: 'dep-raccn', loadChildren: './dep-raccn/dep-raccn.module#DepRaccnPageModule' },
+  { path: 'dep-raccs', loadChildren: './dep-raccs/dep-raccs.module#DepRaccsPageModule' },
+  { path: 'dep-riojuan', loadChildren: './dep-riojuan/dep-riojuan.module#DepRiojuanPageModule' },
+  { path: 'dep-rivas', loadChildren: './dep-rivas/dep-rivas.module#DepRivasPageModule' },
 
 
 ];
