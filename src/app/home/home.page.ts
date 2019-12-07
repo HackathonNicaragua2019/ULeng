@@ -16,7 +16,11 @@ export class HomePage {
     private afAuth: AngularFireAuth
     ) {}
     
-  go(){
+  goCategorias(){
+    this.router.navigate(["/categorias"]);
+  }
+
+  goTeclado(){
     this.router.navigate(["/categorias"]);
   }
 
