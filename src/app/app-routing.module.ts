@@ -147,6 +147,16 @@ const routes: Routes = [
   { path: 'fam-primos', loadChildren: './fam-primos/fam-primos.module#FamPrimosPageModule' },
   { path: 'fam-tia', loadChildren: './fam-tia/fam-tia.module#FamTiaPageModule' },
   { path: 'fam-tio', loadChildren: './fam-tio/fam-tio.module#FamTioPageModule' },
+  { path: 'sal-adios', loadChildren: './sal-adios/sal-adios.module#SalAdiosPageModule' },
+  { path: 'sal-buenasnoches', loadChildren: './sal-buenasnoches/sal-buenasnoches.module#SalBuenasnochesPageModule' },
+  { path: 'sal-buenastardes', loadChildren: './sal-buenastardes/sal-buenastardes.module#SalBuenastardesPageModule' },
+  { path: 'sal-buenosdias', loadChildren: './sal-buenosdias/sal-buenosdias.module#SalBuenosdiasPageModule' },
+  { path: 'sal-comoestas', loadChildren: './sal-comoestas/sal-comoestas.module#SalComoestasPageModule' },
+  { path: 'sal-compermiso', loadChildren: './sal-compermiso/sal-compermiso.module#SalCompermisoPageModule' },
+  { path: 'sal-disculpa', loadChildren: './sal-disculpa/sal-disculpa.module#SalDisculpaPageModule' },
+  { path: 'sal-hastapronto', loadChildren: './sal-hastapronto/sal-hastapronto.module#SalHastaprontoPageModule' },
+  { path: 'sal-hola', loadChildren: './sal-hola/sal-hola.module#SalHolaPageModule' },
+  { path: 'sal-porfavor', loadChildren: './sal-porfavor/sal-porfavor.module#SalPorfavorPageModule' },
 
 
 ];
