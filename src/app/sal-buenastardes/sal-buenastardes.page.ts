@@ -1,15 +1,33 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sal-buenastardes',
   templateUrl: './sal-buenastardes.page.html',
   styleUrls: ['./sal-buenastardes.page.scss'],
 })
-export class SalBuenastardesPage implements OnInit {
+export class SalBuenastardesPage {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit() {
+  home(){
+    this.router.navigate(["/categorias"]);
   }
 
+  regresar_categoria(){
+    this.router.navigate(["/cat-saludos"]);
+  }
+
+  siguiente(){
+    this.router.navigate(["/sal-buenosdias"]);
+  }
+
+  anterior(){
+    this.router.navigate(["/sal-buenasnoches"]);
+  }
+
+  public ocultar: boolean = false;
+  accion(){
+    this.ocultar = !this.ocultar;
+  }
 }
