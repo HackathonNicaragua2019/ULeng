@@ -39,7 +39,7 @@ export class CategoriasPage {
   }
 
   goEmociones(){
-    this.router.navigate(["/cat-Emociones"]);
+    this.router.navigate(["/cat-emociones"]);
   }
 
   goFamilia(){

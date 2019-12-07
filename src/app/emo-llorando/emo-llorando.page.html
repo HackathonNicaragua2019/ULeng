@@ -1,9 +1,32 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>emo_llorando</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
+<ion-content padding class="background">
+    <div style="text-align: center; align-content:center; align-self:center; margin-top: 10px;">
+      <img src="/assets/img/emociones/llorando.png" alt="Enviar" style= "width: 100px; height: 100px;">
+    </div>
+  
+    <div style="text-align: center; align-content:center; align-self:center; margin-top: 10px;">
+      <img src="/assets/img/gif_emociones/Llorando.gif" alt="Enviar" style= "width: 160px; height: 260px;">
+    </div>
+  
+    <button ion-button block (click)="accion()">Ver Instrucciones...</button>
+    <ion-card *ngIf="ocultar" color="interfaz">
+      <h6>Colocar los índices de ambas manos en la cara (expresión).</h6>
+    </ion-card>
+  
 </ion-content>
+  
+<ion-footer>
+      <ion-toolbar color="rosa">
+        <ion-buttons slot="start" style="margin-left: 10px;">
+          <ion-button (click)='anterior()'><ion-icon name="arrow-dropleft-circle"></ion-icon></ion-button>
+        </ion-buttons>
+        <ion-buttons slot="start" style="margin-left: 35px;">
+          <ion-button (click)='siguiente()'><ion-icon name="arrow-dropright-circle"></ion-icon></ion-button>
+        </ion-buttons>
+        <ion-buttons slot="end" style="margin-right: 35px;">
+          <ion-button (click)='home()'><ion-icon name="home"></ion-icon></ion-button>
+        </ion-buttons>
+        <ion-buttons slot="end" style="margin-right: 10px;">
+          <ion-button (click)='regresar_categoria()'><ion-icon name="exit"></ion-icon></ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+</ion-footer>
