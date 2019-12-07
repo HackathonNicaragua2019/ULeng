@@ -126,6 +126,16 @@ const routes: Routes = [
   { path: 'emo-feliz', loadChildren: './emo-feliz/emo-feliz.module#EmoFelizPageModule' },
   { path: 'emo-llorando', loadChildren: './emo-llorando/emo-llorando.module#EmoLlorandoPageModule' },
   { path: 'emo-triste', loadChildren: './emo-triste/emo-triste.module#EmoTristePageModule' },
+  { path: 'col-amarillo', loadChildren: './col-amarillo/col-amarillo.module#ColAmarilloPageModule' },
+  { path: 'col-azul', loadChildren: './col-azul/col-azul.module#ColAzulPageModule' },
+  { path: 'col-blanco', loadChildren: './col-blanco/col-blanco.module#ColBlancoPageModule' },
+  { path: 'col-celeste', loadChildren: './col-celeste/col-celeste.module#ColCelestePageModule' },
+  { path: 'col-morado', loadChildren: './col-morado/col-morado.module#ColMoradoPageModule' },
+  { path: 'col-naranja', loadChildren: './col-naranja/col-naranja.module#ColNaranjaPageModule' },
+  { path: 'col-negro', loadChildren: './col-negro/col-negro.module#ColNegroPageModule' },
+  { path: 'col-rojo', loadChildren: './col-rojo/col-rojo.module#ColRojoPageModule' },
+  { path: 'col-rosado', loadChildren: './col-rosado/col-rosado.module#ColRosadoPageModule' },
+  { path: 'col-verde', loadChildren: './col-verde/col-verde.module#ColVerdePageModule' },
 
 
 ];
