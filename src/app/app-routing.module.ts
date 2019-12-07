@@ -136,6 +136,17 @@ const routes: Routes = [
   { path: 'col-rojo', loadChildren: './col-rojo/col-rojo.module#ColRojoPageModule' },
   { path: 'col-rosado', loadChildren: './col-rosado/col-rosado.module#ColRosadoPageModule' },
   { path: 'col-verde', loadChildren: './col-verde/col-verde.module#ColVerdePageModule' },
+  { path: 'fam-abuela', loadChildren: './fam-abuela/fam-abuela.module#FamAbuelaPageModule' },
+  { path: 'fam-abuelo', loadChildren: './fam-abuelo/fam-abuelo.module#FamAbueloPageModule' },
+  { path: 'fam-hermana', loadChildren: './fam-hermana/fam-hermana.module#FamHermanaPageModule' },
+  { path: 'fam-hermano', loadChildren: './fam-hermano/fam-hermano.module#FamHermanoPageModule' },
+  { path: 'fam-hija', loadChildren: './fam-hija/fam-hija.module#FamHijaPageModule' },
+  { path: 'fam-hijo', loadChildren: './fam-hijo/fam-hijo.module#FamHijoPageModule' },
+  { path: 'fam-mama', loadChildren: './fam-mama/fam-mama.module#FamMamaPageModule' },
+  { path: 'fam-papa', loadChildren: './fam-papa/fam-papa.module#FamPapaPageModule' },
+  { path: 'fam-primos', loadChildren: './fam-primos/fam-primos.module#FamPrimosPageModule' },
+  { path: 'fam-tia', loadChildren: './fam-tia/fam-tia.module#FamTiaPageModule' },
+  { path: 'fam-tio', loadChildren: './fam-tio/fam-tio.module#FamTioPageModule' },
 
 
 ];
