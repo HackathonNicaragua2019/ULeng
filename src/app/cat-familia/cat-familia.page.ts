@@ -1,15 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cat-familia',
   templateUrl: './cat-familia.page.html',
   styleUrls: ['./cat-familia.page.scss'],
 })
-export class CatFamiliaPage implements OnInit {
+export class CatFamiliaPage {
 
-  constructor() { }
+  constructor(private router: Router) { }
+  
+  regresar_categoria(){
+    this.router.navigate(["/categorias"]);
+  }
 
-  ngOnInit() {
+  home(){
+    this.router.navigate(["/home"]);
   }
 
 }
