@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="rosa">
+    <ion-buttons slot="start">
+      <ion-button (click)='home()'><ion-icon name="arrow-back"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title text-center>ÜLengChat!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content #content padding class="background">
+  <ion-input placeholder="Ingresa tu nombre!" [(ngModel)]="userName"></ion-input>
+  <ion-card *ngFor="let message of messages">
+    <ion-card-header>
+      {{message.usuario}}:
+    </ion-card-header>
+    <ion-card-content>
+      {{message.mensaje}}
+    </ion-card-content>
+  </ion-card>
+  <div id="content-end"></div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-input placeholder="Envía tu gif..." [(ngModel)]="message"></ion-input>
+    <ion-buttons slot="end">
+      <ion-button (click)="sendMessage()">
+        <ion-icon name="send"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

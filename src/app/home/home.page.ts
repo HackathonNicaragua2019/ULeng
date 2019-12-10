@@ -21,7 +21,7 @@ export class HomePage {
   }
 
   goTeclado(){
-    this.router.navigate(["/categorias"]);
+    this.router.navigate(["/chat"]);
   }
 
   onLogout(){
