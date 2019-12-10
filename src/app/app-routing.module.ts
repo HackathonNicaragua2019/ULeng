@@ -158,6 +158,7 @@ const routes: Routes = [
   { path: 'sal-hola', loadChildren: './sal-hola/sal-hola.module#SalHolaPageModule' },
   { path: 'sal-porfavor', loadChildren: './sal-porfavor/sal-porfavor.module#SalPorfavorPageModule' },
   { path: 'chat', loadChildren: './chat/chat.module#ChatPageModule' },
+  { path: 'buscador', loadChildren: './buscador/buscador.module#BuscadorPageModule' },
 
 
 ];

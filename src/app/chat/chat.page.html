@@ -9,7 +9,7 @@
 
 <ion-content #content padding class="background">
   <ion-input placeholder="Ingresa tu nombre!" [(ngModel)]="userName"></ion-input>
-  <ion-card *ngFor="let message of messages">
+  <ion-card color="rosado" *ngFor="let message of messages">
     <ion-card-header>
       {{message.usuario}}:
     </ion-card-header>
@@ -22,7 +22,7 @@
 
 <ion-footer>
   <ion-toolbar>
-    <ion-input placeholder="Envía tu gif..." [(ngModel)]="message"></ion-input>
+    <ion-input (click)="keyboard.show()" placeholder="Envía tu gif..." [(ngModel)]="message"></ion-input>
     <ion-buttons slot="end">
       <ion-button (click)="sendMessage()">
         <ion-icon name="send"></ion-icon>

@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController } from "@ionic/angular";
 import { Router } from "@angular/router";
+import { Keyboard } from "@ionic-native/keyboard/ngx";
 import * as firebase from 'firebase';
 
 @Component({
@@ -15,8 +16,9 @@ export class ChatPage {
   message: string = "";
   messages = [];
 
-  constructor(public navCtrl: NavController, private router: Router) {
+  constructor(public navCtrl: NavController, private router: Router, public keyboard: Keyboard) {
     this.getMessages();
+    this.keyboard.show();
   }
 
   getMessages(){

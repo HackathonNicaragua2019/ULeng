@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar color="rosa">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-searchbar color="interfaz" placeholder="Buscar..." (ionChange)="buscar($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <ion-list>
+    <ion-item *ngFor="let item of miLista">
+    {{ item }}
+    </ion-item>
+  </ion-list>
+</ion-content>

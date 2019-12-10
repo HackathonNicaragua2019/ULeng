@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavController } from "@ionic/angular";
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AuthService } from '../services/auth.service';
 
@@ -13,8 +14,9 @@ export class HomePage {
   constructor (
     private authSvc: AuthService, 
     private router: Router,
-    private afAuth: AngularFireAuth
-    ) {}
+    public navCtrl: NavController,
+    private afAuth: AngularFireAuth) {}
+    
     
   goCategorias(){
     this.router.navigate(["/categorias"]);
@@ -22,6 +24,10 @@ export class HomePage {
 
   goTeclado(){
     this.router.navigate(["/chat"]);
+  }
+
+  goBuscador(){
+    this.router.navigate(["/buscador"]);
   }
 
   onLogout(){

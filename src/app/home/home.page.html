@@ -1,8 +1,10 @@
 <ion-toolbar color="rosa">
   <ion-title text-center>Menú!</ion-title>
+  <ion-buttons slot="end">
+    <ion-button (click)='goBuscador()'><ion-icon name="search"></ion-icon></ion-button>
+  </ion-buttons>
 </ion-toolbar>
 <ion-content padding class="background">
-  <ion-searchbar></ion-searchbar>
   <ion-card (click)='goCategorias()' style="margin-top: 20px;">
     <img src="/assets/img/imagencategorias.png">
   </ion-card>
