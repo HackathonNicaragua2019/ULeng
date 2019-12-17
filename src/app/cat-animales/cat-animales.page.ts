@@ -17,4 +17,44 @@ export class CatAnimalesPage {
     this.router.navigate(["/home"]);
   }
 
+  goArdilla(){
+    this.router.navigate(["/ani-ardilla"]);
+  }
+
+  goCaballo(){
+    this.router.navigate(["/ani-caballo"]);
+  }
+
+  goCerdo(){
+    this.router.navigate(["/ani-cerdo"]);
+  }
+
+  goConejo(){
+    this.router.navigate(["/ani-conejo"]);
+  }
+
+  goGallina(){
+    this.router.navigate(["/ani-gallina"]);
+  }
+
+  goGallo(){
+    this.router.navigate(["/ani-gallo"]);
+  }
+
+  goGato(){
+    this.router.navigate(["/ani-gato"]);
+  }
+
+  goMono(){
+    this.router.navigate(["/ani-mono"]);
+  }
+
+  goPerro(){
+    this.router.navigate(["/ani-perro"]);
+  }
+
+  goVaca(){
+    this.router.navigate(["/ani-vaca"]);
+  }
+
 }

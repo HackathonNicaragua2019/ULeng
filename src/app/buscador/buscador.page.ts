@@ -19,7 +19,7 @@ export class BuscadorPage {
     this.miLista = [
     { 
       title: 'Letra A',
-      img: 'assets/img/gif_abecedario/A.gif'
+      img: 'assets/img/gif_abecedario/A.gif' 
     },
     { 
       title: 'Letra B',
@@ -48,6 +48,90 @@ export class BuscadorPage {
     { 
       title: 'Letra H',
       img: 'assets/img/gif_abecedario/H.gif'
+    },
+    { 
+      title: 'Letra I',
+      img: 'assets/img/gif_abecedario/I.gif'
+    },
+    { 
+      title: 'Letra J',
+      img: 'assets/img/gif_abecedario/J.gif'
+    },
+    { 
+      title: 'Letra K',
+      img: 'assets/img/gif_abecedario/K.gif'
+    },
+    { 
+      title: 'Letra L',
+      img: 'assets/img/gif_abecedario/L.gif'
+    },
+    { 
+      title: 'Letra LL',
+      img: 'assets/img/gif_abecedario/LL.gif'
+    },
+    { 
+      title: 'Letra M',
+      img: 'assets/img/gif_abecedario/M.gif'
+    },
+    { 
+      title: 'Letra N',
+      img: 'assets/img/gif_abecedario/N.gif'
+    },
+    { 
+      title: 'Letra Ñ',
+      img: 'assets/img/gif_abecedario/Ñ.gif'
+    },
+    { 
+      title: 'Letra O',
+      img: 'assets/img/gif_abecedario/O.gif'
+    },
+    { 
+      title: 'Letra P',
+      img: 'assets/img/gif_abecedario/P.gif'
+    },
+    { 
+      title: 'Letra Q',
+      img: 'assets/img/gif_abecedario/Q.gif'
+    },
+    { 
+      title: 'Letra R',
+      img: 'assets/img/gif_abecedario/R.gif'
+    },
+    { 
+      title: 'Letra RR',
+      img: 'assets/img/gif_abecedario/Rr.gif'
+    },
+    { 
+      title: 'Letra S',
+      img: 'assets/img/gif_abecedario/S.gif'
+    },
+    { 
+      title: 'Letra T',
+      img: 'assets/img/gif_abecedario/T.gif'
+    },
+    { 
+      title: 'Letra U',
+      img: 'assets/img/gif_abecedario/U.gif'
+    },
+    { 
+      title: 'Letra V',
+      img: 'assets/img/gif_abecedario/V.gif'
+    },
+    { 
+      title: 'Letra W',
+      img: 'assets/img/gif_abecedario/W.gif'
+    },
+    { 
+      title: 'Letra X',
+      img: 'assets/img/gif_abecedario/X.gif'
+    },
+    { 
+      title: 'Letra Y',
+      img: 'assets/img/gif_abecedario/Y.gif'
+    },
+    { 
+      title: 'Letra Z',
+      img: 'assets/img/gif_abecedario/Z.gif'
     },];
   }
 

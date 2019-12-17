@@ -18,4 +18,48 @@ export class CatFamiliaPage {
     this.router.navigate(["/home"]);
   }
 
+  goAbuela(){
+    this.router.navigate(["/fam-abuela"]);
+  }
+
+  goAbuelo(){
+    this.router.navigate(["/fam-abuelo"]);
+  }
+
+  goHermana(){
+    this.router.navigate(["/fam-hermana"]);
+  }
+
+  goHermano(){
+    this.router.navigate(["/fam-hermano"]);
+  }
+
+  goHija(){
+    this.router.navigate(["/fam-hija"]);
+  }
+
+  goHijo(){
+    this.router.navigate(["/fam-hijo"]);
+  }
+
+  goMama(){
+    this.router.navigate(["/fam-mama"]);
+  }
+
+  goPapa(){
+    this.router.navigate(["/fam-papa"]);
+  }
+
+  goPrimos(){
+    this.router.navigate(["/fam-primos"]);
+  }
+
+  goTia(){
+    this.router.navigate(["/fam-tia"]);
+  }
+
+  gotio(){
+    this.router.navigate(["/fam-tio"]);
+  }
+
 }

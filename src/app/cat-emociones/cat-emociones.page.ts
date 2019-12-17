@@ -17,4 +17,40 @@ export class CatEmocionesPage {
     this.router.navigate(["/home"]);
   }
 
+  goAmistoso(){
+    this.router.navigate(["/emo-amistoso"]);
+  }
+
+  goCansado(){
+    this.router.navigate(["/emo-cansado"]);
+  }
+
+  goConfundido(){
+    this.router.navigate(["/emo-confundido"]);
+  }
+
+  goConmocionado(){
+    this.router.navigate(["/emo-conmocionado"]);
+  }
+
+  goEnamorado(){
+    this.router.navigate(["/emo-enamorado"]);
+  }
+
+  goEnojado(){
+    this.router.navigate(["/emo-enojado"]);
+  }
+
+  goFeliz(){
+    this.router.navigate(["/emo-feliz"]);
+  }
+
+  goLlorando(){
+    this.router.navigate(["/emo-llorando"]);
+  }
+
+  goTriste(){
+    this.router.navigate(["/emo-triste"]);
+  }
+
 }
