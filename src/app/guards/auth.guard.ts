@@ -21,4 +21,8 @@ export class AuthGuard implements CanActivate {
       this.router.navigateByUrl('/login');
       return false;
     }
+
+    getUser() {
+      return this.authSvc.afAuth.auth.currentUser.uid;
+    }
 }

@@ -1,9 +1,21 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>{{item.title}}</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-  {{item.description}}
-</ion-content>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Details</ion-title>
+    </ion-toolbar>
+  </ion-header>
+   
+  <ion-content padding>
+  <ion-card *ngFor="let item of items">
+    <ion-card-header>
+      <ion-card-title>
+        {{ item.title }}
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        <img src="{{item.img}}">
+    </ion-card-content>
+  </ion-card>
+  </ion-content>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams } from "@ionic/angular";
+import { ActivatedRoute, Router, Params } from "@angular/router";
 
 @Component({
   selector: 'app-num',
@@ -8,12 +9,14 @@ import { NavController, NavParams } from "@ionic/angular";
 })
 export class NumPage {
 
-  item;
+  items: any;
+  mostrar: boolean = false;
 
-  constructor(public NavParams: NavParams) {
-    this.item = NavParams.data.item;
-   }
-
-  
-
+  constructor(private route: ActivatedRoute, private router: Router) {
+    this.route.queryParams.subscribe(params => {
+      if (params && params.item) {
+        this.items = JSON.parse(params.item);
+      }
+    }); 
+  }
 }

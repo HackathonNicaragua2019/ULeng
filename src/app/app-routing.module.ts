@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './guards/auth.guard';
+import { GiphyService } from "./api/giphy.service";
+import { HttpClientModule } from "@angular/common/http";
 
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule), canActivate: [AuthGuard]},
+  { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   { path: 'categorias', loadChildren: './categorias/categorias.module#CategoriasPageModule', },
   { path: 'cat-abecedario', loadChildren: './cat-abecedario/cat-abecedario.module#CatAbecedarioPageModule' },
   { path: 'cat-animales', loadChildren: './cat-animales/cat-animales.module#CatAnimalesPageModule' },
@@ -79,7 +81,8 @@ const routes: Routes = [
   { path: 'ani-perro', loadChildren: './ani-perro/ani-perro.module#AniPerroPageModule' },
   { path: 'ani-vaca', loadChildren: './ani-vaca/ani-vaca.module#AniVacaPageModule' },
   { path: 'registro', loadChildren: './registro/registro.module#RegistroPageModule' },
-  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },  { path: 'beb-cacao', loadChildren: './beb-cacao/beb-cacao.module#BebCacaoPageModule' },
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
+  { path: 'beb-cacao', loadChildren: './beb-cacao/beb-cacao.module#BebCacaoPageModule' },
   { path: 'beb-chicha', loadChildren: './beb-chicha/beb-chicha.module#BebChichaPageModule' },
   { path: 'beb-linaza', loadChildren: './beb-linaza/beb-linaza.module#BebLinazaPageModule' },
   { path: 'beb-pinolillo', loadChildren: './beb-pinolillo/beb-pinolillo.module#BebPinolilloPageModule' },
@@ -159,13 +162,16 @@ const routes: Routes = [
   { path: 'sal-porfavor', loadChildren: './sal-porfavor/sal-porfavor.module#SalPorfavorPageModule' },
   { path: 'chat', loadChildren: './chat/chat.module#ChatPageModule' },
   { path: 'buscador', loadChildren: './buscador/buscador.module#BuscadorPageModule' },
+  { path: 'tec', loadChildren: './tec/tec.module#TecPageModule' },
 
 
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }), HttpClientModule,
+  ], providers: [
+    GiphyService,
   ],
   exports: [RouterModule]
 })
