@@ -38,7 +38,7 @@ export class ChatPage {
   }
 
   getImage(): void {
-    const saludos = ['ulenghola', 'ulengadios', 'depressed', 'healthy'];
+    const saludos = ['sign language', 'deaf', 'asl', 'sign language'];
     const randomNumber: number = Math.floor(Math.random() * 4) +1;
     this.giphyService.getImage(saludos[randomNumber -1]).subscribe(
       (image) => {

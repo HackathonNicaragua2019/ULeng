@@ -22,12 +22,7 @@
 </div>
 <div>
   <div>
-    <ion-card>
-      <img *ngIf="gif?.image" src="{{gif.image}}">
-      <ion-card-content>
-        <ion-button style="text-transform: none;" (click)="shuffle()">Siguiente...</ion-button>
-      </ion-card-content>
-    </ion-card>
+    
   </div>
   <!-- <ion-grid>
     <ion-row>
@@ -44,12 +39,12 @@
 
 <ion-footer>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button (click)="go()">
-        <ion-icon name="gift"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-    <ion-input (click)="keyboard.show()" placeholder="Envía tu gif..." [(ngModel)]="message"></ion-input>
+    <ion-card>
+      <img *ngIf="gif?.image" src="{{gif.image}}">
+      <ion-card-content>
+        <ion-button style="text-transform: none;" (click)="shuffle()">Siguiente...</ion-button>
+      </ion-card-content>
+    </ion-card>
     <ion-buttons slot="end">
       <ion-button (click)="sendMessage()">
         <ion-icon name="send"></ion-icon>
