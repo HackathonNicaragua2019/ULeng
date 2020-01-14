@@ -7,5 +7,7 @@
     <ion-input placeholder="Contraseña" type="password" [(ngModel)]="user.password"></ion-input>
   </ion-item>
   <ion-button expand="block" color="rosa" style="text-transform: none; margin-top: 20px;" (click)="onRegister()">Regístrame!</ion-button>
-  <ion-button expand="block" color="rosa" style="text-transform: none; margin-top: 5px;" (click)="goLogin()">Login!</ion-button>
+  <div text-center>
+    Si ya tienes una cuenta, <a routerLink='/login'>inicia sesión!</a>
+  </div>
 </ion-content>

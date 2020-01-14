@@ -8,6 +8,8 @@
     <ion-label position="floating">Contraseña!</ion-label>
     <ion-input type="password" [(ngModel)]="user.password"></ion-input>
   </ion-item>
-  <ion-button expand="block" color="rosa" style="text-transform: none; margin-top: 20px;" (click)="onLogin()">Login!</ion-button>
-  <ion-button expand="block" color="rosa" style="text-transform: none; margin-top: 5px;" (click)="goRegistro()">Regístrame!</ion-button>
+  <ion-button expand="block" color="rosa" style="text-transform: none; margin-top: 20px;" (click)="onLogin()">Iniciar Sesión!</ion-button>
+  <div text-center>
+    No tienes una cuenta? <a routerLink='/registro'>Regístrate!</a>
+  </div>
 </ion-content>
