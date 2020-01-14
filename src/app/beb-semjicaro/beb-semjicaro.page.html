@@ -1,9 +1,34 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>beb_semjicaro</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content padding class="background">
+  <div style="text-align: center; align-content:center; align-self:center; margin-top: 10px;">
+    <img src="/assets/img/bebidas/semillajicaro.png">
+  </div>
 
-<ion-content>
+  <div style="text-align: center; align-content:center; align-self:center; margin-top: 10px;">
+    <img src="/assets/img/gif_bebidas/SemillaJicaro.gif" alt="Enviar" style= "width: 200px; height: 300px;">
+  </div>
+
+  <button ion-button block (click)="accion()">Ver Instrucciones...</button>
+  <ion-card *ngIf="ocultar" color="interfaz">
+    <h6>“Esta palabra no tiene seña por lo tanto se usa el dactilado”
+      Empuñe la mano y muévala a los lados, encoja sus dedos, después los dedos índice, medio y angular colóquelos hacia abajo formando una “m”, coloque el dedo meñique en horizontal y los demás dedos juntos, Con la palma extendida mantener el dedo índice vertical y el pulgar horizontal formando una "L" y muévala hacia la derecha, empuñe la mano a excepción del dedo pulgar(mantenga el dedo recto), luego coloque su mano a un lado de la boca con el dedo índice vertical y los demás dedos juntarlos formando un círculo y encoja los dedos, después Con el dedo meñique y los demás dedos juntos, girar la mano (si es diestro a la derecha, si es zurdo a la izquierda) formando la letra "J", coloque el dedo meñique en horizontal y los demás dedos juntos, con la mano hacer la forma de una "C", empuñe la mano a excepción del dedo pulgar(mantenga el dedo recto), cruce los dedos índice y medio formando una “r” , y por ultimo junte todos los dedos formando un círculo (o).
+      </h6>
+  </ion-card>
 
 </ion-content>
+
+<ion-footer>
+    <ion-toolbar color="rosa">
+      <ion-buttons slot="start" style="margin-left: 10px;">
+        <ion-button (click)='anterior()'><ion-icon name="arrow-dropleft-circle"></ion-icon></ion-button>
+      </ion-buttons>
+      <ion-buttons slot="start" style="margin-left: 35px;">
+        <ion-button (click)='siguiente()'><ion-icon name="arrow-dropright-circle"></ion-icon></ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end" style="margin-right: 35px;">
+        <ion-button (click)='home()'><ion-icon name="home"></ion-icon></ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end" style="margin-right: 10px;">
+        <ion-button (click)='regresar_categoria()'><ion-icon name="exit"></ion-icon></ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>

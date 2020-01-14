@@ -33,3 +33,24 @@ div[scrolly=true] {
     height: 100px;
     margin: 10px;
 }
+
+.scroll-horizontal {
+    white-space: nowrap;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    height: 112px;
+
+    .scroll-item {
+        display: inline-block;
+        &:first-child {
+            margin-left: 6px;
+        }
+
+        img {
+            border-radius: 6px;
+            margin-right: 6px;
+            height: 100px;
+            margin-top: 5px;
+        }
+    }
+}
