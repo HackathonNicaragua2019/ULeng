@@ -16,4 +16,24 @@ export class GiphyService {
     const requestURL = `${this.giphyUrl}?api_key=${this.giphyApiKey}&q=${query}`;
     return this.http.get(requestURL);
   }
+
+  getImage1(query): Observable<any> {
+    const requestURL = `${this.giphyUrl}?api_key=${this.giphyApiKey}&q=${query}`;
+    return this.http.get(requestURL);
+  }
+
+  getImage2(query): Observable<any> {
+    const requestURL = `${this.giphyUrl}?api_key=${this.giphyApiKey}&q=${query}`;
+    return this.http.get(requestURL);
+  }
+
+  getImage3(query): Observable<any> {
+    const requestURL = `${this.giphyUrl}?api_key=${this.giphyApiKey}&q=${query}`;
+    return this.http.get(requestURL);
+  }
+
+  getImage4(query): Observable<any> {
+    const requestURL = `${this.giphyUrl}?api_key=${this.giphyApiKey}&q=${query}`;
+    return this.http.get(requestURL);
+  }
 }

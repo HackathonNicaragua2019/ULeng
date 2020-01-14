@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content #content padding class="background">
+<ion-content padding class="background">
   <div scrollX="true">
   <ion-input placeholder="Ingresa tu nombre!" [(ngModel)]="userName"></ion-input>
   <ion-card color="rosado" *ngFor="let message of messages">
@@ -20,32 +20,25 @@
     </ion-card-content>
   </ion-card>
 </div>
-<div>
-  <div>
-    
-  </div>
-  <!-- <ion-grid>
-    <ion-row>
-      <ion-col size="6" *ngFor="let item of img" >
-        <img src="{{item}}" [(ngModel)]="image" ngDefaultControl>
-        <ion-buttons>
-          <ion-button (click)="sendMessage()">Enviar GIf!</ion-button>
-        </ion-buttons>
-      </ion-col>
-    </ion-row>
-  </ion-grid> -->
-</div>
 </ion-content>
 
 <ion-footer>
   <ion-toolbar>
     <div class="scroll-horizontal">
-      <div class="scroll-item" (click)="sendMessage()">
-        <img *ngIf="gif?.image" src="{{gif.image}}">
-        <img *ngIf="gif?.image" src="{{gif.image}}">
-        <img *ngIf="gif?.image" src="{{gif.image}}">
-        <img *ngIf="gif?.image" src="{{gif.image}}">
-        <img *ngIf="gif?.image" src="{{gif.image}}">
+      <div class="scroll-item">
+        <img (click)="sendMessage()" *ngIf="gif?.image" src="{{gif.image}}">
+      </div>
+      <div class="scroll-item">
+        <img (click)="sendMessage1()" *ngIf="gif?.images" src="{{gif.images}}">
+      </div>
+      <div class="scroll-item">
+        <img (click)="sendMessage2()" *ngIf="gif?.images2" src="{{gif.images2}}">
+      </div>
+      <div class="scroll-item">
+        <img (click)="sendMessage3()" *ngIf="gif?.images3" src="{{gif.images3}}">
+      </div>
+      <div class="scroll-item">
+        <img (click)="sendMessage4()" *ngIf="gif?.images4" src="{{gif.images4}}">
       </div>
     </div>
   </ion-toolbar>
