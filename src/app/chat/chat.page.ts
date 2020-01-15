@@ -33,6 +33,12 @@ export class ChatPage {
     this.getImage2();
     this.getImage3();
     this.getImage4();
+    this.getImage5();
+    this.getImage6();
+    this.getImage7();
+    this.getImage8();
+    this.getImage9();
+    this.getImage10();
   }
 
   scrollToBottom() {
@@ -91,6 +97,67 @@ export class ChatPage {
     );
   }
 
+  getImage5(): void {
+    const saludos = ['hands', 'hands', 'hands', 'hands'];
+    const randomNumber: number = Math.floor(Math.random() * 4) +1;
+    this.giphyService.getImage(saludos[randomNumber -1]).subscribe(
+      (images5) => {
+        this.gif.images5 = images5.data[0].images.downsized_medium.url;
+      }
+    );
+  }
+
+  getImage6(): void {
+    const saludos = ['asllesson', 'asllesson', 'asllesson', 'asllesson'];
+    const randomNumber: number = Math.floor(Math.random() * 4) +1;
+    this.giphyService.getImage(saludos[randomNumber -1]).subscribe(
+      (images6) => {
+        this.gif.images6 = images6.data[0].images.downsized_medium.url;
+      }
+    );
+  }
+
+  getImage7(): void {
+    const saludos = ['americansignlanguage', 'americansignlanguage', 'americansignlanguage', 'americansignlanguage'];
+    const randomNumber: number = Math.floor(Math.random() * 4) +1;
+    this.giphyService.getImage(saludos[randomNumber -1]).subscribe(
+      (images7) => {
+        this.gif.images7 = images7.data[0].images.downsized_medium.url;
+      }
+    );
+  }
+
+  getImage8(): void {
+    const saludos = ['sordo', 'sordo', 'sordo', 'sordo'];
+    const randomNumber: number = Math.floor(Math.random() * 4) +1;
+    this.giphyService.getImage(saludos[randomNumber -1]).subscribe(
+      (images8) => {
+        this.gif.images8 = images8.data[0].images.downsized_medium.url;
+      }
+    );
+  }
+
+  getImage9(): void {
+    const saludos = ['sordomudo', 'sordomudo', 'sordomudo', 'sordomudo'];
+    const randomNumber: number = Math.floor(Math.random() * 4) +1;
+    this.giphyService.getImage(saludos[randomNumber -1]).subscribe(
+      (images9) => {
+        this.gif.images9 = images9.data[0].images.downsized_medium.url;
+      }
+    );
+  }
+
+  getImage10(): void {
+    const saludos = ['lenguadesenas', 'lenguadesenas', 'lenguadesenas', 'lenguadesenas'];
+    const randomNumber: number = Math.floor(Math.random() * 4) +1;
+    this.giphyService.getImage(saludos[randomNumber -1]).subscribe(
+      (images10) => {
+        this.gif.images10 = images10.data[0].images.downsized_medium.url;
+      }
+    );
+  }
+  
+
   shuffle() {
     this.getImage();
   }
@@ -135,6 +202,43 @@ export class ChatPage {
     messagesRef.push({mensaje: this.message, usuario: this.userName, imagen: this.gif.images4});
     this.message = "";
   }
+
+  sendMessage5(){
+    var messagesRef = firebase.database().ref().child("mensajes");
+    messagesRef.push({mensaje: this.message, usuario: this.userName, imagen: this.gif.images5});
+    this.message = "";
+  }
+
+  sendMessage6(){
+    var messagesRef = firebase.database().ref().child("mensajes");
+    messagesRef.push({mensaje: this.message, usuario: this.userName, imagen: this.gif.images6});
+    this.message = "";
+  }
+
+  sendMessage7(){
+    var messagesRef = firebase.database().ref().child("mensajes");
+    messagesRef.push({mensaje: this.message, usuario: this.userName, imagen: this.gif.images7});
+    this.message = "";
+  }
+
+  sendMessage8(){
+    var messagesRef = firebase.database().ref().child("mensajes");
+    messagesRef.push({mensaje: this.message, usuario: this.userName, imagen: this.gif.images8});
+    this.message = "";
+  }
+
+  sendMessage9(){
+    var messagesRef = firebase.database().ref().child("mensajes");
+    messagesRef.push({mensaje: this.message, usuario: this.userName, imagen: this.gif.images9});
+    this.message = "";
+  }
+
+  sendMessage10(){
+    var messagesRef = firebase.database().ref().child("mensajes");
+    messagesRef.push({mensaje: this.message, usuario: this.userName, imagen: this.gif.images10});
+    this.message = "";
+  }
+
 
   home(){
     this.router.navigate(["/home"]);
