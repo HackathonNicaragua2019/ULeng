@@ -60,4 +60,10 @@
       </div>
     </div>
   </ion-toolbar>
+  <ion-toolbar>
+    <ion-input placeholder="Escribe tu mensaje..." [(ngModel)]="message"></ion-input>
+    <ion-buttons slot="end">
+      <ion-button (click)='sendMessageText()'><ion-icon name="send"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-footer>

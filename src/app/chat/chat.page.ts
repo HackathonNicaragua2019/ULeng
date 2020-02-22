@@ -173,69 +173,75 @@ export class ChatPage {
     });
   }
 
+  sendMessageText(){
+    var messagesRef = firebase.database().ref().child("mensajes");
+    messagesRef.push({mensaje: this.message, usuario: this.userName});
+    this.message = "";
+  }
+  
   sendMessage(){
     var messagesRef = firebase.database().ref().child("mensajes");
-    messagesRef.push({mensaje: this.message, usuario: this.userName, imagen: this.gif.image});
+    messagesRef.push({usuario: this.userName, imagen: this.gif.image});
     this.message = "";
   }
 
   sendMessage1(){
     var messagesRef = firebase.database().ref().child("mensajes");
-    messagesRef.push({mensaje: this.message, usuario: this.userName, imagen: this.gif.images});
+    messagesRef.push({usuario: this.userName, imagen: this.gif.images});
     this.message = "";
   }
 
   sendMessage2(){
     var messagesRef = firebase.database().ref().child("mensajes");
-    messagesRef.push({mensaje: this.message, usuario: this.userName, imagen: this.gif.images2});
+    messagesRef.push({usuario: this.userName, imagen: this.gif.images2});
     this.message = "";
   }
 
   sendMessage3(){
     var messagesRef = firebase.database().ref().child("mensajes");
-    messagesRef.push({mensaje: this.message, usuario: this.userName, imagen: this.gif.images3});
+    messagesRef.push({usuario: this.userName, imagen: this.gif.images3});
     this.message = "";
   }
 
   sendMessage4(){
     var messagesRef = firebase.database().ref().child("mensajes");
-    messagesRef.push({mensaje: this.message, usuario: this.userName, imagen: this.gif.images4});
+    messagesRef.push({usuario: this.userName, imagen: this.gif.images4});
     this.message = "";
   }
 
   sendMessage5(){
     var messagesRef = firebase.database().ref().child("mensajes");
-    messagesRef.push({mensaje: this.message, usuario: this.userName, imagen: this.gif.images5});
+    messagesRef.push({usuario: this.userName, imagen: this.gif.images5});
     this.message = "";
   }
 
   sendMessage6(){
     var messagesRef = firebase.database().ref().child("mensajes");
-    messagesRef.push({mensaje: this.message, usuario: this.userName, imagen: this.gif.images6});
+    messagesRef.push({usuario: this.userName, imagen: this.gif.images6});
     this.message = "";
   }
 
   sendMessage7(){
     var messagesRef = firebase.database().ref().child("mensajes");
-    messagesRef.push({mensaje: this.message, usuario: this.userName, imagen: this.gif.images7});
+    messagesRef.push({usuario: this.userName, imagen: this.gif.images7});
     this.message = "";
   }
 
   sendMessage8(){
     var messagesRef = firebase.database().ref().child("mensajes");
-    messagesRef.push({mensaje: this.message, usuario: this.userName, imagen: this.gif.images8});
+    messagesRef.push({usuario: this.userName, imagen: this.gif.images8});
     this.message = "";
   }
 
   sendMessage9(){
     var messagesRef = firebase.database().ref().child("mensajes");
-    messagesRef.push({mensaje: this.message, usuario: this.userName, imagen: this.gif.images9});
+    messagesRef.push({usuario: this.userName, imagen: this.gif.images9});
     this.message = "";
   }
 
   sendMessage10(){
     var messagesRef = firebase.database().ref().child("mensajes");
-    messagesRef.push({mensaje: this.message, usuario: this.userName, imagen: this.gif.images10});
+    messagesRef.push({usuario: this.userName, imagen: this.gif.images10});
     this.message = "";
   }
 

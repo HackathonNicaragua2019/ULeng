@@ -1,0 +1,22 @@
+[
+    {
+        "icon": "home",
+        "name": "Principal",
+        "redirectTo": "/home"
+    },
+    {
+        "icon": "grid",
+        "name": "Categorías",
+        "redirectTo": "/categorias"
+    },
+    {
+        "icon": "chatbubbles",
+        "name": "Chat en Línea",
+        "redirectTo": "/chat"
+    },
+    {
+        "icon": "search",
+        "name": "Buscador",
+        "redirectTo": "/buscador"
+    }
+]

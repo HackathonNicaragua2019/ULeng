@@ -1,4 +1,9 @@
 <ion-toolbar color="rosa">
+  <ion-buttons slot="start">
+    <ion-button (click)="toggleMenu()">
+      <ion-icon slot="icon-only" name="menu"></ion-icon>
+    </ion-button>
+  </ion-buttons>
   <ion-title text-center>Menú!</ion-title>
   <ion-buttons slot="end">
     <ion-button (click)='goBuscador()'><ion-icon name="search"></ion-icon></ion-button>
