@@ -36,4 +36,21 @@ export class GiphyService {
     const requestURL = `${this.giphyUrl}?api_key=${this.giphyApiKey}&q=${query}`;
     return this.http.get(requestURL);
   }
-}
+
+  search(query: string): Observable<any> {
+    return this.http.get(`${this.giphyUrl}/search`, {
+      params: {
+        apiKey: this.giphyApiKey,
+        q: query
+      }
+    });
+  }
+
+  trending(): Observable<any> {
+    return this.http.get(`${this.giphyUrl}/trending`, {
+      params: {
+        apiKey: this.giphyApiKey
+      }
+    });
+  }
+} 

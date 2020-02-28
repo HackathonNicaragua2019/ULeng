@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-categorias',
@@ -8,7 +9,11 @@ import { Router } from '@angular/router';
 })
 export class CategoriasPage {
 
-  constructor ( private router: Router ) {}
+  constructor ( private router: Router, private menuCtrl: MenuController ) {}
+
+  toggleMenu(){
+    this.menuCtrl.toggle();
+  }
 
   home(){
     this.router.navigate(["/home"]);

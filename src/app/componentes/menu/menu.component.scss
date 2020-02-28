@@ -1,0 +1,6 @@
+$colorGradient1: #8e28a9;
+$colorGradient2: #FC755B;
+
+ion-icon.bg-gradient {
+    --background: linear-gradient(to right, #{$colorGradient1} 0%, #{$colorGradient2} 100%);
+}

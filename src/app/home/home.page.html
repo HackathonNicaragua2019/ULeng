@@ -1,20 +1,18 @@
-<ion-toolbar color="rosa">
-  <ion-buttons slot="start">
-    <ion-button (click)="toggleMenu()">
-      <ion-icon slot="icon-only" name="menu"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-  <ion-title text-center>Menú!</ion-title>
+<ion-toolbar color="azul">
+  <ion-title text-center color="light">ÜLeng!</ion-title>
   <ion-buttons slot="end">
-    <ion-button (click)='goBuscador()'><ion-icon name="search"></ion-icon></ion-button>
+    <ion-button (click)='goBuscador()'><ion-icon  color="light" name="search"></ion-icon></ion-button>
   </ion-buttons>
 </ion-toolbar>
 <ion-content padding class="background">
-  <ion-card (click)='goCategorias()' style="margin-top: 20px;">
+  <div style="text-align: center; align-content:center; align-self:center; margin-top: 10px;">
+    <img src="/assets/img/LogoBlanco.png" alt="Enviar" style= "width: 120px; height: 120px; margin-left: 5px;">
+  </div>
+  <ion-card (click)='goCategorias()' style="text-align: center; align-content:center; align-self:center; margin-top: 20px;">
     <img src="/assets/img/categorias.png">
   </ion-card>
-  <ion-card (click)='goTeclado()' style="margin-top: 30px;">
+  <ion-card (click)='goTeclado()' style="text-align: center; align-content:center; align-self:center; margin-top: 30px;">
       <img src="/assets/img/chatlinea.png">
     </ion-card>
-  <ion-button expand="block" color="rosa" style="text-transform: none; margin-top: 20px;" (click)="onLogout()">Cerrar Sesión</ion-button>
+  <ion-button expand="block" color="azul" style="text-transform: none; margin-top: 20px;" (click)="onLogout()">Cerrar Sesión</ion-button>
 </ion-content>

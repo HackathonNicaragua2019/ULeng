@@ -1,9 +1,11 @@
 <ion-header>
-  <ion-toolbar color="rosa">
+  <ion-toolbar color="azul">
     <ion-buttons slot="start">
-        <ion-button fill="clear" (click)='home()'><ion-icon name="home"></ion-icon></ion-button>
+      <ion-button (click)="toggleMenu()">
+        <ion-icon  color="light" slot="icon-only" name="menu"></ion-icon>
+      </ion-button>
     </ion-buttons>
-    <ion-title text-center>Categorias!</ion-title>
+    <ion-title text-center color="light">Categorias!</ion-title>
     <ion-buttons slot="end">
         <ion-button></ion-button>
     </ion-buttons>
@@ -12,44 +14,71 @@
 
 <ion-content padding class="background">
 
-  <ion-card (click)='goAbecedario()' style="margin-top: 5px;">
-    <img src="/assets/img/categorias/abecedario.png">
-  </ion-card>
+  <div style="text-align: center; align-content:center; align-self:center; margin-top: 10px;">
+    <img src="/assets/img/LogoBlanco.png" alt="Enviar" style= "width: 120px; height: 120px; margin-left: 5px;">
+  </div>
 
-  <ion-card (click)='goAnimales()' style="margin-top: 3px;">
-    <img src="/assets/img/categorias/animales.png">
-  </ion-card>
-
-  <ion-card (click)='goBebidas()' style="margin-top: 3px;">
-    <img src="/assets/img/categorias/bebidas.png">
-  </ion-card>
-
-  <ion-card (click)='goColores()' style="margin-top: 3px;">
-    <img src="/assets/img/categorias/colores.png">
-  </ion-card>
-
-  <ion-card (click)='goComidas()' style="margin-top: 3px;">
-    <img src="/assets/img/categorias/comidas.png">
-  </ion-card>
-
-  <ion-card (click)='goDepartamentos()' style="margin-top: 3px;">
-    <img src="/assets/img/categorias/departamentos.png">
-  </ion-card>
-
-  <ion-card (click)='goEmociones()' style="margin-top: 3px;">
-    <img src="/assets/img/categorias/emociones.png">
-  </ion-card>
-
-  <ion-card (click)='goFamilia()' style="margin-top: 3px;">
-    <img src="/assets/img/categorias/familia.png">
-  </ion-card>
-
-  <ion-card (click)='goNumeros()' style="margin-top: 3px;">
-    <img src="/assets/img/categorias/numeros.png">
-  </ion-card>
-
-  <ion-card (click)='goSaludos()' style="margin-top: 3px;">
-    <img src="/assets/img/categorias/saludos.png">
-  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card (click)='goAbecedario()' style="margin-top: 5px;">
+          <img src="/assets/img/categorias/abecedario.png">
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card (click)='goAnimales()' style="margin-top: 3px;">
+          <img src="/assets/img/categorias/animales.png">
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card (click)='goBebidas()' style="margin-top: 3px;">
+          <img src="/assets/img/categorias/bebidas.png">
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card (click)='goColores()' style="margin-top: 3px;">
+          <img src="/assets/img/categorias/colores.png">
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card (click)='goComidas()' style="margin-top: 3px;">
+          <img src="/assets/img/categorias/comidas.png">
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card (click)='goDepartamentos()' style="margin-top: 3px;">
+          <img src="/assets/img/categorias/departamentos.png">
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card (click)='goEmociones()' style="margin-top: 3px;">
+          <img src="/assets/img/categorias/emociones.png">
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card (click)='goFamilia()' style="margin-top: 3px;">
+          <img src="/assets/img/categorias/familia.png">
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card (click)='goNumeros()' style="margin-top: 3px;">
+          <img src="/assets/img/categorias/numeros.png">
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card (click)='goSaludos()' style="margin-top: 3px;">
+          <img src="/assets/img/categorias/saludos.png">
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

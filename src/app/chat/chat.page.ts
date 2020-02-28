@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, IonContent } from "@ionic/angular";
-import { Router, NavigationExtras } from "@angular/router";
+import { NavController, IonContent, MenuController } from "@ionic/angular";
+import { Router, ActivatedRoute } from "@angular/router";
 import { Keyboard } from "@ionic-native/keyboard/ngx";
 import { GiphyService } from "../api/giphy.service";
 import * as firebase from 'firebase';
@@ -20,11 +20,17 @@ export class ChatPage {
   imgG: any = "";
   messages = [];
 
-  constructor(public navCtrl: NavController, private router: Router, public keyboard: Keyboard, protected giphyService: GiphyService) {
-    this.getMessages();
-    this.keyboard.show();
-    this.initialize();
-  }
+  constructor(public navCtrl: NavController, 
+    private router: Router, 
+    public keyboard: Keyboard, 
+    private route: ActivatedRoute, 
+    protected giphyService: GiphyService, 
+    private menuCtrl: MenuController) 
+    {
+      this.getMessages();
+      this.keyboard.show();
+      this.initialize(); 
+    }
 
   initialize() {
     this.scrollToBottom();
@@ -39,6 +45,11 @@ export class ChatPage {
     this.getImage8();
     this.getImage9();
     this.getImage10();
+    this.getImage11();
+    this.getImage12();
+    this.getImage13();
+    this.getImage14();
+    this.getImage15();
   }
 
   scrollToBottom() {
@@ -48,7 +59,7 @@ export class ChatPage {
   }
 
   getImage(): void {
-    const saludos = ['sign language', 'sign language', 'sign language', 'sign language'];
+    const saludos = ['asl sordo', 'asl sordo', 'asl sordo', 'asl sordo'];
     const randomNumber: number = Math.floor(Math.random() * 4) +1;
     this.giphyService.getImage(saludos[randomNumber -1]).subscribe(
       (image) => {
@@ -58,7 +69,7 @@ export class ChatPage {
   }
 
   getImage1(): void {
-    const saludos = ['deaf', 'deaf', 'deaf', 'deaf'];
+    const saludos = ['ASL recordar', 'ASL recordar', 'ASL recordar', 'ASL recordar'];
     const randomNumber: number = Math.floor(Math.random() * 4) +1;
     this.giphyService.getImage1(saludos[randomNumber -1]).subscribe(
       (images) => {
@@ -68,7 +79,7 @@ export class ChatPage {
   }
 
   getImage2(): void {
-    const saludos = ['signlanguage', 'signlanguage', 'signlanguage', 'signlanguage'];
+    const saludos = ['asl encontrar', 'asl encontrar', 'asl encontrar', 'asl encontrar'];
     const randomNumber: number = Math.floor(Math.random() * 4) +1;
     this.giphyService.getImage2(saludos[randomNumber -1]).subscribe(
       (images2) => {
@@ -88,7 +99,7 @@ export class ChatPage {
   }
 
   getImage4(): void {
-    const saludos = ['signingwithnyle', 'signingwithnyle', 'signingwithnyle', 'signingwithnyle'];
+    const saludos = ['ASL hola', 'ASL hola', 'ASL hola', 'ASL hola'];
     const randomNumber: number = Math.floor(Math.random() * 4) +1;
     this.giphyService.getImage4(saludos[randomNumber -1]).subscribe(
       (images4) => {
@@ -108,7 +119,7 @@ export class ChatPage {
   }
 
   getImage6(): void {
-    const saludos = ['asllesson', 'asllesson', 'asllesson', 'asllesson'];
+    const saludos = ['asl abrazar', 'asl abrazar', 'asl abrazar', 'asl abrazar'];
     const randomNumber: number = Math.floor(Math.random() * 4) +1;
     this.giphyService.getImage(saludos[randomNumber -1]).subscribe(
       (images6) => {
@@ -118,7 +129,7 @@ export class ChatPage {
   }
 
   getImage7(): void {
-    const saludos = ['americansignlanguage', 'americansignlanguage', 'americansignlanguage', 'americansignlanguage'];
+    const saludos = ['asl amigo', 'asl amigo', 'asl amigo', 'asl amigo'];
     const randomNumber: number = Math.floor(Math.random() * 4) +1;
     this.giphyService.getImage(saludos[randomNumber -1]).subscribe(
       (images7) => {
@@ -128,7 +139,7 @@ export class ChatPage {
   }
 
   getImage8(): void {
-    const saludos = ['sordo', 'sordo', 'sordo', 'sordo'];
+    const saludos = ['asl novio', 'asl novio', 'asl novio', 'asl novio'];
     const randomNumber: number = Math.floor(Math.random() * 4) +1;
     this.giphyService.getImage(saludos[randomNumber -1]).subscribe(
       (images8) => {
@@ -138,7 +149,7 @@ export class ChatPage {
   }
 
   getImage9(): void {
-    const saludos = ['sordomudo', 'sordomudo', 'sordomudo', 'sordomudo'];
+    const saludos = ['asl cuanto', 'asl cuanto', 'asl cuanto', 'asl cuanto'];
     const randomNumber: number = Math.floor(Math.random() * 4) +1;
     this.giphyService.getImage(saludos[randomNumber -1]).subscribe(
       (images9) => {
@@ -148,7 +159,7 @@ export class ChatPage {
   }
 
   getImage10(): void {
-    const saludos = ['lenguadesenas', 'lenguadesenas', 'lenguadesenas', 'lenguadesenas'];
+    const saludos = ['asl discutir', 'asl discutir', 'asl discutir', 'asl discutir'];
     const randomNumber: number = Math.floor(Math.random() * 4) +1;
     this.giphyService.getImage(saludos[randomNumber -1]).subscribe(
       (images10) => {
@@ -156,7 +167,56 @@ export class ChatPage {
       }
     );
   }
-  
+
+  getImage11(): void {
+    const saludos = ['asl que', 'asl que', 'asl que', 'asl que'];
+    const randomNumber: number = Math.floor(Math.random() * 4) +1;
+    this.giphyService.getImage(saludos[randomNumber -1]).subscribe(
+      (images11) => {
+        this.gif.images11 = images11.data[0].images.downsized_medium.url;
+      }
+    );
+  }
+
+  getImage12(): void {
+    const saludos = ['asl crecer', 'asl crecer', 'asl crecer', 'asl crecer'];
+    const randomNumber: number = Math.floor(Math.random() * 4) +1;
+    this.giphyService.getImage(saludos[randomNumber -1]).subscribe(
+      (images12) => {
+        this.gif.images12 = images12.data[0].images.downsized_medium.url;
+      }
+    );
+  }
+
+  getImage13(): void {
+    const saludos = ['asl bailar', 'asl bailar', 'asl bailar', 'asl bailar'];
+    const randomNumber: number = Math.floor(Math.random() * 4) +1;
+    this.giphyService.getImage(saludos[randomNumber -1]).subscribe(
+      (images13) => {
+        this.gif.images13 = images13.data[0].images.downsized_medium.url;
+      }
+    );
+  }
+
+  getImage14(): void {
+    const saludos = ['asl amor', 'asl amor', 'asl amor', 'asl amor'];
+    const randomNumber: number = Math.floor(Math.random() * 4) +1;
+    this.giphyService.getImage(saludos[randomNumber -1]).subscribe(
+      (images14) => {
+        this.gif.images14 = images14.data[0].images.downsized_medium.url;
+      }
+    );
+  }
+
+  getImage15(): void {
+    const saludos = ['asl cuantosanos', 'asl cuantosanos', 'asl cuantosanos', 'asl cuantosanos'];
+    const randomNumber: number = Math.floor(Math.random() * 4) +1;
+    this.giphyService.getImage(saludos[randomNumber -1]).subscribe(
+      (images15) => {
+        this.gif.images15 = images15.data[0].images.downsized_medium.url;
+      }
+    );
+  }
 
   shuffle() {
     this.getImage();
@@ -243,6 +303,40 @@ export class ChatPage {
     var messagesRef = firebase.database().ref().child("mensajes");
     messagesRef.push({usuario: this.userName, imagen: this.gif.images10});
     this.message = "";
+  }
+
+  sendMessage11(){
+    var messagesRef = firebase.database().ref().child("mensajes");
+    messagesRef.push({usuario: this.userName, imagen: this.gif.images11});
+    this.message = "";
+  }
+
+  sendMessage12(){
+    var messagesRef = firebase.database().ref().child("mensajes");
+    messagesRef.push({usuario: this.userName, imagen: this.gif.images12});
+    this.message = "";
+  }
+
+  sendMessage13(){
+    var messagesRef = firebase.database().ref().child("mensajes");
+    messagesRef.push({usuario: this.userName, imagen: this.gif.images13});
+    this.message = "";
+  }
+
+  sendMessage14(){
+    var messagesRef = firebase.database().ref().child("mensajes");
+    messagesRef.push({usuario: this.userName, imagen: this.gif.images14});
+    this.message = "";
+  }
+
+  sendMessage15(){
+    var messagesRef = firebase.database().ref().child("mensajes");
+    messagesRef.push({usuario: this.userName, imagen: this.gif.images15});
+    this.message = "";
+  }
+
+  toggleMenu(){
+    this.menuCtrl.toggle();
   }
 
 

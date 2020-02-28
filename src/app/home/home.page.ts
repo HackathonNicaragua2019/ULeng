@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { NavController, MenuController } from "@ionic/angular";
+import { NavController } from "@ionic/angular";
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AuthService } from '../services/auth.service';
 
@@ -15,8 +15,7 @@ export class HomePage {
     private authSvc: AuthService, 
     private router: Router,
     public navCtrl: NavController,
-    private afAuth: AngularFireAuth,
-    private menuCtrl: MenuController) {}
+    private afAuth: AngularFireAuth) {}
     
     
   goCategorias(){
@@ -29,10 +28,6 @@ export class HomePage {
 
   goBuscador(){
     this.router.navigate(["/buscador"]);
-  }
-
-  toggleMenu(){
-    this.menuCtrl.toggle();
   }
 
   onLogout(){

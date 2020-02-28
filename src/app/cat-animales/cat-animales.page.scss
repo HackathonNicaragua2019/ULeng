@@ -1,3 +1,10 @@
 ion-content.background{
-    --background:url('/assets/img/interfaz.png') 0 0/100% 100% no-repeat;
+    --background:url('/assets/img/interfazP.png') 0 0/100% 100% no-repeat;
+}
+
+$colorGradient1: #8e28a9;
+$colorGradient2: #FC755B;
+
+ion-toolbar.bg-gradient {
+    --background: linear-gradient(to right, #{$colorGradient1} 0%, #{$colorGradient2} 100%);
 }

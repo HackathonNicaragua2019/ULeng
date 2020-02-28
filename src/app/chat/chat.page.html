@@ -1,9 +1,11 @@
 <ion-header>
-  <ion-toolbar color="rosa">
+  <ion-toolbar color="azul">
     <ion-buttons slot="start">
-      <ion-button (click)='home()'><ion-icon name="arrow-back"></ion-icon></ion-button>
+      <ion-button (click)="toggleMenu()">
+        <ion-icon  color="light" slot="icon-only" name="menu"></ion-icon>
+      </ion-button>
     </ion-buttons>
-    <ion-title text-center>ÜLengChat!</ion-title>
+    <ion-title text-center color="light">ÜLengChat!</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -58,10 +60,25 @@
       <div class="scroll-item">
         <img (click)="sendMessage10()" *ngIf="gif?.images10" src="{{gif.images10}}">
       </div>
+      <div class="scroll-item">
+        <img (click)="sendMessage11()" *ngIf="gif?.images11" src="{{gif.images11}}">
+      </div>
+      <div class="scroll-item">
+        <img (click)="sendMessage12()" *ngIf="gif?.images12" src="{{gif.images12}}">
+      </div>
+      <div class="scroll-item">
+        <img (click)="sendMessage13()" *ngIf="gif?.images13" src="{{gif.images13}}">
+      </div>
+      <div class="scroll-item">
+        <img (click)="sendMessage14()" *ngIf="gif?.images14" src="{{gif.images14}}">
+      </div>
+      <div class="scroll-item">
+        <img (click)="sendMessage15()" *ngIf="gif?.images15" src="{{gif.images15}}">
+      </div>
     </div>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-input placeholder="Escribe tu mensaje..." [(ngModel)]="message"></ion-input>
+    <ion-input placeholder="Escribe un mensaje..." [(ngModel)]="message"></ion-input>
     <ion-buttons slot="end">
       <ion-button (click)='sendMessageText()'><ion-icon name="send"></ion-icon></ion-button>
     </ion-buttons>
