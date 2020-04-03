@@ -13,6 +13,7 @@ import { AngularFireAuthModule, AngularFireAuth } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import { Keyboard } from "@ionic-native/keyboard/ngx";
 import { ComponentesModule } from "./componentes/componentes.module";
+import { Camera } from '@ionic-native/camera/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,11 +22,11 @@ import { ComponentesModule } from "./componentes/componentes.module";
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    ComponentesModule
+    ComponentesModule,
   ],
   providers: [
     StatusBar,
-    SplashScreen,
+    SplashScreen, Camera,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     Keyboard,
   ],

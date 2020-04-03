@@ -22,3 +22,60 @@ ion-content.background{
         }
     }
 }
+
+:host {
+    ion-toolbar {
+        --border-color: transparent
+    }
+
+    ion-textarea {
+        border-radius: 17px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        --background: #f8f8f8;
+        --padding-start: 12px;
+        --padding-end: 64px;
+        --padding-top: 6px;
+        --padding-bottom: 8px;
+    }
+
+    .has-elastic-input {
+        padding: 4px 8px;
+    }
+
+    .input-block {
+        margin-left: 8px;
+    }
+
+    .stick-bottom {
+        align-self: flex-end;
+        margin-bottom: 4px;
+    }
+
+    .button-photo {
+        background-color: #2fb1ff;
+        color: white!important;
+        font-weight: 700;
+        font-size: 12px;
+        border-radius: 999em;
+        width: 28px;
+        height: 28px;
+    }
+
+    .button-submit {
+        position: absolute;
+        right: 12px;
+        bottom: 2px;
+        ion-button {
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+}
+
+:host-context(.md) {
+    .has-elastic-input {
+        .stick-bottom {
+            margin-bottom: 10px;
+        }
+    }
+}

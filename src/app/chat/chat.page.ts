@@ -3,6 +3,7 @@ import { NavController, IonContent, MenuController } from "@ionic/angular";
 import { Router, ActivatedRoute } from "@angular/router";
 import { Keyboard } from "@ionic-native/keyboard/ngx";
 import { GiphyService } from "../api/giphy.service";
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import * as firebase from 'firebase';
 
 @Component({
@@ -13,6 +14,7 @@ import * as firebase from 'firebase';
 export class ChatPage {
 
   protected gif: any = {image: ''};
+  myPhoto: any;
 
   @ViewChild(IonContent, {read: IonContent, static: false}) content: IonContent;
   userName: string = "";
@@ -25,7 +27,8 @@ export class ChatPage {
     public keyboard: Keyboard, 
     private route: ActivatedRoute, 
     protected giphyService: GiphyService, 
-    private menuCtrl: MenuController) 
+    private menuCtrl: MenuController,
+    private camera: Camera) 
     {
       this.getMessages();
       this.keyboard.show();
@@ -89,7 +92,7 @@ export class ChatPage {
   }
 
   getImage3(): void {
-    const saludos = ['lolatpablo', 'lolatpablo', 'lolatpablo', 'lolatpablo'];
+    const saludos = ['asl elegir', 'asl elegir', 'asl elegir', 'asl elegir'];
     const randomNumber: number = Math.floor(Math.random() * 4) +1;
     this.giphyService.getImage3(saludos[randomNumber -1]).subscribe(
       (images3) => {
@@ -109,7 +112,7 @@ export class ChatPage {
   }
 
   getImage5(): void {
-    const saludos = ['hands', 'hands', 'hands', 'hands'];
+    const saludos = ['asl not', 'asl not', 'asl not', 'asl not'];
     const randomNumber: number = Math.floor(Math.random() * 4) +1;
     this.giphyService.getImage(saludos[randomNumber -1]).subscribe(
       (images5) => {
@@ -189,7 +192,7 @@ export class ChatPage {
   }
 
   getImage13(): void {
-    const saludos = ['asl bailar', 'asl bailar', 'asl bailar', 'asl bailar'];
+    const saludos = ['asl huir', 'asl huir', 'asl huir', 'asl huir'];
     const randomNumber: number = Math.floor(Math.random() * 4) +1;
     this.giphyService.getImage(saludos[randomNumber -1]).subscribe(
       (images13) => {
@@ -199,7 +202,7 @@ export class ChatPage {
   }
 
   getImage14(): void {
-    const saludos = ['asl amor', 'asl amor', 'asl amor', 'asl amor'];
+    const saludos = ['asl obedecer', 'asl obedecer', 'asl obedecer', 'asl obedecer'];
     const randomNumber: number = Math.floor(Math.random() * 4) +1;
     this.giphyService.getImage(saludos[randomNumber -1]).subscribe(
       (images14) => {
@@ -337,6 +340,40 @@ export class ChatPage {
 
   toggleMenu(){
     this.menuCtrl.toggle();
+  }
+
+  takePhoto() {
+    const options: CameraOptions = {
+      quality: 70,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      encodingType: this.camera.EncodingType.JPEG,
+      mediaType: this.camera.MediaType.PICTURE
+    }
+    this.camera.getPicture(options).then((imageData) => {
+      this.myPhoto = 'data:image/jpeg;base64,' + imageData;
+      var messagesRef = firebase.database().ref().child("mensajes");
+      messagesRef.push({usuario: this.userName, imagen: this.myPhoto});
+      this.message = "";
+    }, (err) => {
+
+    });
+  }
+
+  getPhoto() {
+    const options: CameraOptions = {
+      quality: 70,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
+      saveToPhotoAlbum: false
+    }
+    this.camera.getPicture(options).then((imageData) => {
+      this.myPhoto = 'data:image/jpeg;base64,' + imageData;
+      var messagesRef = firebase.database().ref().child("mensajes");
+      messagesRef.push({usuario: this.userName, imagen: this.myPhoto});
+      this.message = "";
+    }, (err) => {
+
+    });
   }
 
 

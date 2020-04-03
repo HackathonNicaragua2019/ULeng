@@ -1,0 +1,29 @@
+<ion-content padding class="background">
+  <div style="text-align: center; align-content:center; align-self:center; margin-top: 10px;">
+    <img src="/assets/img/deportes/baloncesto.png" alt="Enviar" style= "width: 100px; height: 100px;">
+  </div>
+
+  <div style="text-align: center; align-content:center; align-self:center; margin-top: 10px;">
+    <img src="/assets/img/gif_deportes/Baloncesto.gif" alt="Enviar" style= "width: 200px; height: 300px;">
+  </div>
+
+  <button ion-button block (click)="accion()">Ver Instrucciones...</button>
+  <ion-card *ngIf="ocultar" color="interfaz">
+    <h6>Colocar ambas manos a la altura de la cintura y moverlas un poco de arriba hacia abajo y luego estirar ambos brazos y flexionar las muñecas sino hacer como se hace un lanzamiento de baloncesto.</h6>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar color="rosa">
+      <ion-buttons slot="start" style="margin-left: 35px;">
+        <ion-button (click)='siguiente()'><ion-icon name="arrow-dropright-circle"></ion-icon></ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end" style="margin-right: 35px;">
+        <ion-button (click)='home()'><ion-icon name="home"></ion-icon></ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end" style="margin-right: 10px;">
+        <ion-button (click)='regresar_categoria()'><ion-icon name="exit"></ion-icon></ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+</ion-footer>

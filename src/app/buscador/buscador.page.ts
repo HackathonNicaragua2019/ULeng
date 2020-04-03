@@ -453,6 +453,26 @@ export class BuscadorPage {
         redirectTo: '/dep-rivas'
       },
       {
+        name: '[Deportes] Baloncesto',
+        redirectTo: '/depo-baloncesto'
+      },
+      {
+        name: '[Deportes] Béisbol',
+        redirectTo: '/depo-beisbol'
+      },
+      {
+        name: '[Deportes] Fútbol',
+        redirectTo: '/depo-futbol'
+      },
+      {
+        name: '[Deportes] Natación',
+        redirectTo: '/depo-natacion'
+      },
+      {
+        name: '[Deportes] Tenis',
+        redirectTo: '/depo-tenis'
+      },
+      {
         name: '[Emociones] Amistoso',
         redirectTo: '/emo-amistoso'
       },
@@ -531,6 +551,26 @@ export class BuscadorPage {
       {
         name: '[Familia] Tío',
         redirectTo: '/fam-tio'
+      },
+      {
+        name: '[Instrumentos Musicales] Acordeón',
+        redirectTo: '/ins-acordeon'
+      },
+      {
+        name: '[Instrumentos Musicales] Flauta',
+        redirectTo: '/ins-flauta'
+      },
+      {
+        name: '[Instrumentos Musicales] Guitarra',
+        redirectTo: '/ins-guitarra'
+      },
+      {
+        name: '[Instrumentos Musicales] Piano',
+        redirectTo: '/ins-piano'
+      },
+      {
+        name: '[Instrumentos Musicales] Violín',
+        redirectTo: '/ins-violin'
       },
       {
         name: '[Saludos] Adiós',

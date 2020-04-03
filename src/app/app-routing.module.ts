@@ -162,7 +162,19 @@ const routes: Routes = [
   { path: 'sal-porfavor', loadChildren: './sal-porfavor/sal-porfavor.module#SalPorfavorPageModule' },
   { path: 'chat', loadChildren: './chat/chat.module#ChatPageModule' },
   { path: 'buscador', loadChildren: './buscador/buscador.module#BuscadorPageModule' },
-  { path: 'tec', loadChildren: './tec/tec.module#TecPageModule' },
+  { path: 'tec', loadChildren: './tec/tec.module#TecPageModule' },  { path: 'cat-deportes', loadChildren: './cat-deportes/cat-deportes.module#CatDeportesPageModule' },
+  { path: 'cat-instrumentos', loadChildren: './cat-instrumentos/cat-instrumentos.module#CatInstrumentosPageModule' },
+  { path: 'ins-acordeon', loadChildren: './ins-acordeon/ins-acordeon.module#InsAcordeonPageModule' },
+  { path: 'ins-flauta', loadChildren: './ins-flauta/ins-flauta.module#InsFlautaPageModule' },
+  { path: 'ins-guitarra', loadChildren: './ins-guitarra/ins-guitarra.module#InsGuitarraPageModule' },
+  { path: 'ins-piano', loadChildren: './ins-piano/ins-piano.module#InsPianoPageModule' },
+  { path: 'ins-violin', loadChildren: './ins-violin/ins-violin.module#InsViolinPageModule' },
+  { path: 'depo-baloncesto', loadChildren: './depo-baloncesto/depo-baloncesto.module#DepoBaloncestoPageModule' },
+  { path: 'depo-beisbol', loadChildren: './depo-beisbol/depo-beisbol.module#DepoBeisbolPageModule' },
+  { path: 'depo-futbol', loadChildren: './depo-futbol/depo-futbol.module#DepoFutbolPageModule' },
+  { path: 'depo-natacion', loadChildren: './depo-natacion/depo-natacion.module#DepoNatacionPageModule' },
+  { path: 'depo-tenis', loadChildren: './depo-tenis/depo-tenis.module#DepoTenisPageModule' },
+
 
 
 ];

@@ -43,12 +43,20 @@ export class CategoriasPage {
     this.router.navigate(["/cat-departamentos"]);
   }
 
+  goDeportes(){
+    this.router.navigate(["/cat-deportes"]);
+  }
+
   goEmociones(){
     this.router.navigate(["/cat-emociones"]);
   }
 
   goFamilia(){
     this.router.navigate(["/cat-familia"]);
+  }
+
+  goInstrumentos(){
+    this.router.navigate(["/cat-instrumentos"]);
   }
 
   goNumeros(){

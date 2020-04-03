@@ -12,7 +12,7 @@
 <ion-content padding class="background">
   <div scrollX="true">
   <ion-input placeholder="Ingresa tu nombre!" [(ngModel)]="userName"></ion-input>
-  <ion-card color="rosado" *ngFor="let message of messages">
+  <ion-card color="light" *ngFor="let message of messages">
     <ion-card-header>
       {{message.usuario}}:
     </ion-card-header>
@@ -77,10 +77,18 @@
       </div>
     </div>
   </ion-toolbar>
-  <ion-toolbar>
-    <ion-input placeholder="Escribe un mensaje..." [(ngModel)]="message"></ion-input>
-    <ion-buttons slot="end">
-      <ion-button (click)='sendMessageText()'><ion-icon name="send"></ion-icon></ion-button>
+  <ion-toolbar no-border class="has-elastic-input">
+    <ion-buttons slot="start" align-self-bottom class="stick bottom">
+      <ion-button small class="button-photo" (click)='takePhoto()'><ion-icon name="camera"></ion-icon></ion-button>
     </ion-buttons>
+    <ion-buttons slot="start" align-self-bottom class="stick bottom">
+      <ion-button small class="button-photo" (click)='getPhoto()'><ion-icon name="image"></ion-icon></ion-button>
+    </ion-buttons>
+    <div class="input-block">
+      <ion-textarea #messageInput auto-resize [(ngModel)]="message" rows="1" placeholder="Escribe un mensaje..."></ion-textarea>
+      <ion-buttons right class="stick-bottom button-submit" slot="end">
+        <ion-button type="submit" [disabled]="message.length == 0" fill="clear" color="morado" (click)='sendMessageText()'><ion-icon name="send"></ion-icon></ion-button>
+      </ion-buttons>
+    </div>
   </ion-toolbar>
 </ion-footer>

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar class="bg-gradient">
+    <ion-buttons slot="start">
+      <ion-button (click)='regresar_categoria()'><ion-icon color="light" name="arrow-back"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title text-center color="light">Instrumentos Musicales!</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)='home()'><ion-icon color="light" name="home"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background">
+
+  <div class="card">
+    <div class="item item-body">
+      <img class="full-image"src="/assets/img/portadaInstrumentos.png" >
+    </div>
+  </div>
+  <div style="text-align: center; align-content:center; align-self:center; margin-top: 10px;">
+    <a (click)="goAcordeon()"><img src="/assets/img/instrumentos/acordeon.png" alt="Enviar" style= "width: 100px; height: 100px; margin-left: 5px;"></a>
+    <a (click)="goFlauta()"><img src="/assets/img/instrumentos/flauta.png" alt="Enviar" style= "width: 100px; height: 100px; margin-left: 5px;"></a>
+    <a (click)="goGuitarra()"><img src="/assets/img/instrumentos/guitarra.png" alt="Enviar" style= "width: 100px; height: 100px; margin-left: 5px;"></a>
+    <a (click)="goPiano()"><img src="/assets/img/instrumentos/piano.png" alt="Enviar" style= "width: 100px; height: 100px; margin-left: 5px;"></a>
+    <a (click)="goViolin()"><img src="/assets/img/instrumentos/violin.png" alt="Enviar" style= "width: 100px; height: 100px; margin-left: 5px;"></a>
+  </div>
+    
+</ion-content>
